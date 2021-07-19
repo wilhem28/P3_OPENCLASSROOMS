@@ -1,0 +1,36 @@
+@mixin columnTextCenter(){
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+@mixin rowTextCenter(){
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+@mixin violetGradientButton(){
+    background: linear-gradient(172deg, #eb72da 15%, #9d59dc 100%);
+}
+@mixin boxShadowButton(){
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
+    -o-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
+    -ms-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
+}
+@mixin lightBoxShadowButton(){
+    -webkit-box-shadow: 0px 7px 5px 0px #eaeaea;
+    -moz-box-shadow: 0px 7px 5px 0px #eaeaea;
+    -o-box-shadow: 0px 7px 5px 0px #eaeaea;
+    -ms-box-shadow: 0px 7px 5px 0px #eaeaea;
+    box-shadow: 0px 7px 5px 0px #eaeaea;
+}
+@mixin menuBoxShadow(){
+    -webkit-box-shadow: 0 0 5px 5px rgba(212, 212, 212, 0.23);
+    -moz-box-shadow: 0 0 5px 5px rgba(212, 212, 212, 0.23);
+    -o-box-shadow: 0 0 5px 5px rgba(212, 212, 212, 0.23);
+    -ms-box-shadow: 0 0 5px 5px rgba(212, 212, 212, 0.23);
+    box-shadow: 0 0 5px 5px rgba(212, 212, 212, 0.23);
+}

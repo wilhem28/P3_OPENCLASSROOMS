@@ -459,7 +459,7 @@ main {
 }
 .principal .principal__title h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.75rem;
+  font-size: 1.65rem;
 }
 .principal .principal__title #Capa_1 {
   position: absolute;
@@ -485,7 +485,7 @@ main {
   align-items: center;
   height: 35px;
   margin-top: -3px;
-  font-size: 0.89rem;
+  font-size: 0.85rem;
   background-color: #eaeaea;
 }
 
@@ -521,14 +521,15 @@ main {
   padding: 12px 0 12px 0;
 }
 .general__choose__slider .left-side h4 {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 10px;
 }
 .general__choose__slider .left-side .information {
-  font-size: 0.9rem;
+  font-size: 0.83rem;
+  color: #303030;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -604,8 +605,8 @@ main {
           animation-delay: 0;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 .general__choose__slider:hover .my-selection > .fa-check {
   -webkit-animation-name: drive;

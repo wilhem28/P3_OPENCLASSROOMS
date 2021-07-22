@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,15 @@
   font-size: 17px;
 }
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* HEADER */
 header {
   display: flex;
   flex-flow: row nowrap;
@@ -14,23 +25,25 @@ header {
   position: relative;
   height: 63px;
 }
-header #logo {
+header .header__logo {
   display: flex;
   width: 164px;
   height: 100%;
 }
-header #logo img {
+header .header__logo img {
   display: flex;
   width: 100%;
   height: 100%;
 }
 
+/* MAIN */
 main {
   display: flex;
   flex-flow: column nowrap;
 }
 
-main > .location {
+/* section location */
+.location {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -39,27 +52,30 @@ main > .location {
   height: 50px;
   background-image: linear-gradient(180deg, rgba(183, 183, 183, 0.68) 0.05%, #eaeaea 7%);
 }
-main > .location .location__container {
+.location .location__wrapper {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   width: 164px;
   height: 100%;
 }
-main > .location .location__container .fa-map-marker-alt {
+.location .location__wrapper .fas.fa-map-marker-alt {
   display: flex;
   align-items: center;
   padding: 16px 17px 18px 0;
   font-size: 0.95rem;
+  color: #353535;
 }
-main > .location .location__container p {
+.location .location__wrapper p {
   display: flex;
   align-items: center;
   padding: 16px 0;
   font-size: 0.93rem;
+  color: #353535;
 }
 
-main > .description {
+/* section description */
+.description {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -67,20 +83,17 @@ main > .description {
   padding: 41px 0 57px 0;
   background-color: #f6f6f6;
 }
-main > .description h1 {
+.description h1 {
   text-align: center;
-  font-size: 1.4rem;
-  padding: 0 17.067% 14px 17.067%;
+  font-size: 1.3rem;
+  padding: 0 20.2% 14px 16.5%;
 }
-main > .description p {
+.description p {
   text-align: center;
-  padding: 0 10.04% 27px 10.04%;
-  color: grey;
+  padding: 0 8.8% 27px 10%;
+  color: #414141;
 }
-main > .description a {
-  text-decoration: none;
-}
-main > .description a .description__discovery {
+.description .description__btn {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -89,42 +102,59 @@ main > .description a .description__discovery {
   -o-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
   -ms-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
-  width: 218px;
+  width: 210px;
   height: 50px;
   font-size: 0.9rem;
   border-radius: 50px;
   color: #ffffff;
+  overflow: hidden;
+}
+.description .description__btn a {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.description .description__btn a p {
+  display: flex;
+  flex-flow: row nowrap;
+  color: #ffffff;
+  padding: 0 20px;
+  font-size: 0.9rem;
 }
 
-main > .notice {
+/* section notice */
+.operation {
   display: flex;
   flex-flow: column nowrap;
 }
-
-main > .notice > .notice__title {
+.operation .operation__title {
   display: flex;
   height: 103px;
   padding: 50px 5.33% 30px 5.33%;
 }
-main > .notice > .notice__title h2 {
+.operation .operation__title h2 {
   font-size: 1.3rem;
 }
-
-main > .notice > .notice__chooses {
+.operation .operation__choices {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: center;
   padding: 0 4.8% 44px 4.8%;
 }
-main > .notice > .notice__chooses .notice__choose {
+
+.operation-choice {
   display: flex;
   align-items: center;
   width: 100%;
   height: 73px;
   margin-bottom: 24px;
 }
-main > .notice > .notice__chooses .notice__choose > .notice__number {
+.operation-choice .operation-step {
   position: absolute;
   display: flex;
   flex-flow: row nowrap;
@@ -138,7 +168,7 @@ main > .notice > .notice__chooses .notice__choose > .notice__number {
   padding-top: 4px;
   font-size: 0.8rem;
 }
-main > .notice > .notice__chooses .notice__choose > .notice__container {
+.operation-choice .operation-description {
   display: flex;
   align-items: center;
   width: 100%;
@@ -151,66 +181,70 @@ main > .notice > .notice__chooses .notice__choose > .notice__container {
   padding-left: 35px;
   border-radius: 15px;
   transition-property: background-color;
-  transition-duration: 100ms;
+  transition-duration: 200ms;
   transition-timing-function: ease-in-out;
 }
-main > .notice > .notice__chooses .notice__choose > .notice__container:hover {
+.operation-choice .operation-description .fa-mobile-alt {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-right: 19px;
+  color: grey;
+  font-size: 1.2rem;
+}
+.operation-choice .operation-description .fa-list-ul, .operation-choice .operation-description .fa-store {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-right: 19px;
+  color: #7e7e7e;
+  font-size: 1.2rem;
+  transform: scaleX(0.85);
+}
+.operation-choice .operation-description p {
+  font-size: 0.95rem;
+  font-weight: bolder;
+}
+.operation-choice .operation-description:hover {
   background-color: #f5edff;
   cursor: pointer;
 }
-main > .notice > .notice__chooses .notice__choose > .notice__container:hover .fas.fa-list-ul, main > .notice > .notice__chooses .notice__choose > .notice__container:hover .fa-mobile-alt {
+.operation-choice .operation-description:hover .fa-list-ul, .operation-choice .operation-description:hover .fa-mobile-alt, .operation-choice .operation-description:hover .fa-store {
   color: #9356dc;
 }
-main > .notice > .notice__chooses .notice__choose > .notice__container--selected {
+
+.operation-description.operation-description--selected {
   background-color: #f5edff;
 }
-main > .notice > .notice__chooses .notice__choose > .notice__container--selected .fas.fa-store {
+.operation-description.operation-description--selected .fa-store {
   margin-right: 19px;
   color: #9356dc;
   font-size: 1rem;
 }
-main > .notice > .notice__chooses .notice__choose > .notice__container > .fa-mobile-alt {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  margin-right: 19px;
-  color: grey;
-  font-size: 1.2rem;
-}
-main > .notice > .notice__chooses .notice__choose > .notice__container > .fas.fa-list-ul, main > .notice > .notice__chooses .notice__choose > .notice__container .fas.fa-store {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  margin-right: 19px;
-  color: grey;
-  font-size: 1.2rem;
-  transform: scaleX(0.9);
-}
-main > .notice > .notice__chooses .notice__choose > .notice__container > p {
-  font-size: 0.95rem;
-}
 
-main > #restaurants {
+/* section restaurants */
+#restaurants {
   display: flex;
   flex-flow: column nowrap;
   background-color: #f6f6f6;
   padding: 0 5.33%;
 }
-main > #restaurants .restaurants__title {
+#restaurants .restaurants__title {
   width: 100%;
   height: 104px;
   padding-top: 56px;
 }
-main > #restaurants .restaurants__title h2 {
+#restaurants .restaurants__title h2 {
   font-size: 1.3rem;
 }
-main > #restaurants .restaurants__examples {
+#restaurants .restaurants__examples {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   padding-bottom: 46px;
 }
-main > #restaurants .restaurants__examples a {
+
+.restaurants__examples a {
   display: flex;
   width: 100%;
   min-width: 280px;
@@ -220,7 +254,7 @@ main > #restaurants .restaurants__examples a {
   color: #000000;
   margin-bottom: 18px;
 }
-main > #restaurants .restaurants__examples a .restaurants__example {
+.restaurants__examples a .restaurants__example {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
@@ -232,28 +266,26 @@ main > #restaurants .restaurants__examples a .restaurants__example {
   border-radius: 15px;
   overflow: hidden;
 }
-main > #restaurants .restaurants__examples a .restaurants__example figure {
+.restaurants__examples a .restaurants__example figure {
   position: relative;
   display: flex;
   width: 100%;
   height: 100%;
 }
-main > #restaurants .restaurants__examples a .restaurants__example figure img {
+.restaurants__examples a .restaurants__example figure img {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 100% 98%;
+     object-position: 100% 98%;
   width: 100%;
   height: 175px;
 }
-main > #restaurants .restaurants__examples a .restaurants__example figure img .position-bottom {
-  -o-object-position: bottom;
-     object-position: bottom;
+.restaurants__examples a .restaurants__example figure .position-center {
+  -o-object-position: 100% 62%;
+     object-position: 100% 62%;
 }
-main > #restaurants .restaurants__examples a .restaurants__example figure img .position-center {
-  -o-object-position: 100% 60%;
-     object-position: 100% 60%;
-}
-main > #restaurants .restaurants__examples a .restaurants__example figure p {
+.restaurants__examples a .restaurants__example figure p {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -269,7 +301,7 @@ main > #restaurants .restaurants__examples a .restaurants__example figure p {
   font-weight: 900;
   border-radius: 2px;
 }
-main > #restaurants .restaurants__examples a .restaurants__example .container_description {
+.restaurants__examples a .restaurants__example .container_description {
   display: grid;
   grid-template-columns: 9fr 1fr;
   grid-template-rows: repeat(2, 1fr);
@@ -277,25 +309,24 @@ main > #restaurants .restaurants__examples a .restaurants__example .container_de
   background-color: #ffffff;
   height: 76px;
 }
-main > #restaurants .restaurants__examples a .restaurants__example .container_description figcaption {
+.restaurants__examples a .restaurants__example .container_description .society {
   display: flex;
-  font-size: 1rem;
+  font-size: 0.82rem;
   font-weight: bold;
 }
-main > #restaurants .restaurants__examples a .restaurants__example .container_description .container-heart {
+.restaurants__examples a .restaurants__example .container_description .container-heart {
   position: relative;
   display: grid;
   grid-column: 2;
   grid-row: span 2;
-  z-index: 1000;
 }
-main > #restaurants .restaurants__examples a .restaurants__example .container_description .container-heart #Capa_1 {
+.restaurants__examples a .restaurants__example .container_description .container-heart .Capa_1 {
   position: absolute;
   display: flex;
   top: 5px;
-  transform: scale(0.99);
+  transform: scale(0.999);
 }
-main > #restaurants .restaurants__examples a .restaurants__example .container_description .container-heart #Capa_2 {
+.restaurants__examples a .restaurants__example .container_description .container-heart .Capa_2 {
   position: absolute;
   top: 5px;
   display: flex;
@@ -304,14 +335,16 @@ main > #restaurants .restaurants__examples a .restaurants__example .container_de
   transition-property: opacity;
   transition-timing-function: ease-in-out;
 }
-main > #restaurants .restaurants__examples a .restaurants__example .container_description .container-heart #Capa_2:hover {
+.restaurants__examples a .restaurants__example .container_description .container-heart .Capa_2:hover {
   opacity: 1;
+  z-index: 1000;
 }
-main > #restaurants .restaurants__examples a .restaurants__example .container_description p {
+.restaurants__examples a .restaurants__example .container_description p {
   display: flex;
-  font-weight: lighter;
+  font-size: 0.82rem;
 }
 
+/* FOOTER */
 footer {
   display: flex;
   flex-flow: column nowrap;
@@ -323,7 +356,7 @@ footer #societyName {
   display: flex;
   align-items: center;
   font-family: "Shrikhand", cursive;
-  font-size: 1rem;
+  font-size: 0.82rem;
   color: #ffffff;
   width: 100px;
   padding-bottom: 18px;
@@ -336,38 +369,33 @@ footer .footer__nav ul {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  height: 101px;
+  height: 80px;
 }
 footer .footer__nav ul li {
   display: flex;
+  justify-content: flex-start;
   flex-flow: row nowrap;
-  list-style: none;
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: 0.73rem;
 }
 footer .footer__nav ul li .fa-utensils {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9rem;
-  margin-top: -2px;
+  align-items: flex-start;
+  font-size: 0.7rem;
   margin-right: 10px;
-  width: 15px;
-  transform: scale(0.8);
+  transform: scaleY(0.85);
 }
 footer .footer__nav ul li .fa-hands-helping {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
-  margin-top: 2px;
-  margin-right: 10px;
-  width: 15px;
-  transform: scale(0.8) rotate(-15deg);
+  font-size: 0.7rem;
+  margin-right: 7px;
+  margin-left: -2px;
+  transform: scale(0.7) rotate(-20deg);
 }
 
+/* À LA FRANÇAISE */
+/* HEADER */
 .heading-la-palette-du-gout {
   display: flex;
   justify-content: center;
@@ -385,34 +413,36 @@ footer .footer__nav ul li .fa-hands-helping {
   left: 24px;
 }
 
+/* MAIN */
 main {
   display: flex;
   flex-flow: column nowrap;
 }
 
-main > .visual {
+/* section visual */
+.visual {
   display: flex;
   flex-flow: column nowrap;
-  width: 100%;
+  z-index: -1000;
 }
-main > .visual figure {
+.visual figure {
   position: relative;
   display: flex;
   width: 100%;
   height: 256px;
   overflow: hidden;
 }
-main > .visual figure img {
+.visual figure img {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
   transform: scaleX(1.07);
   width: 100%;
   height: 100%;
-  z-index: -1;
 }
 
-main > .principal {
+/* section article */
+.principal {
   display: flex;
   flex-flow: column nowrap;
   background-color: #eaeaea;
@@ -420,50 +450,52 @@ main > .principal {
   padding-bottom: 83px;
   border-radius: 33px 33px 0 0;
 }
-main > .principal .principal__title {
+.principal .principal__title {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   padding: 33px 38px 29px 18px;
 }
-main > .principal .principal__title h1 {
+.principal .principal__title h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
-main > .principal .principal__title #Capa_1 {
+.principal .principal__title #Capa_1 {
   position: absolute;
   right: 38px;
   top: 40px;
 }
-main > .principal .general {
+
+.general {
   display: flex;
   align-items: center;
   padding-left: 18px;
   height: 36px;
 }
-main > .principal .general .general__border-entrees {
+.general .general__border-entrees {
   display: flex;
   align-items: center;
   height: 38px;
   width: 60px;
   background-image: linear-gradient(270deg, #eaeaea 18px, #99e2d0 18px);
 }
-main > .principal .general .general__border-entrees .entrees {
+.general .general__border-entrees .entrees {
   display: flex;
   align-items: center;
   height: 35px;
   margin-top: -3px;
-  font-size: 0.85rem;
+  font-size: 0.89rem;
   background-color: #eaeaea;
 }
-main > .principal .general__chooses {
+
+.general__chooses {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   margin: 14px;
 }
-main > .principal .general__chooses .general__choose {
+.general__chooses .general__choose {
   -o-box-shadow: 0 0 5px 5px rgba(212, 212, 212, 0.23);
   -ms-box-shadow: 0 0 5px 5px rgba(212, 212, 212, 0.23);
   box-shadow: 0 0 5px 5px rgba(212, 212, 212, 0.23);
@@ -476,48 +508,55 @@ main > .principal .general__chooses .general__choose {
   border-radius: 15px;
   overflow: hidden;
 }
-main > .principal .general__chooses .general__choose .general__choose__slider {
+
+.general__choose__slider {
   display: flex;
 }
-main > .principal .general__chooses .general__choose .general__choose__slider .left-side {
+.general__choose__slider .left-side {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   height: 100%;
-  width: 270px;
-  padding: 14px 0 14px 10px;
+  width: 275px;
+  padding: 12px 0 12px 0;
 }
-main > .principal .general__chooses .general__choose .general__choose__slider .left-side h4 {
-  display: flex;
-  font-size: 1rem;
+.general__choose__slider .left-side h4 {
+  font-size: 1.05rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 10px;
 }
-main > .principal .general__chooses .general__choose .general__choose__slider .left-side .information {
-  display: flex;
-  font-size: 0.85rem;
+.general__choose__slider .left-side .information {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 10px;
 }
-main > .principal .general__chooses .general__choose .general__choose__slider .right-side {
+.general__choose__slider .right-side {
   display: flex;
   align-items: flex-end;
-  transition-property: transform;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-main > .principal .general__chooses .general__choose .general__choose__slider .right-side .price {
+.general__choose__slider .right-side .price {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
   width: 80px;
   height: 100%;
   font-size: 0.8rem;
   font-weight: bold;
 }
-main > .principal .general__chooses .general__choose .general__choose__slider .right-side .price .currency {
+.general__choose__slider .right-side .price .currency {
   padding-left: 1px;
   font-size: 0.8rem;
   font-weight: bold;
 }
-main > .principal .general__chooses .general__choose .general__choose__slider .right-side .my-selection {
+.general__choose__slider .my-selection {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -526,7 +565,7 @@ main > .principal .general__chooses .general__choose .general__choose__slider .r
   height: 100%;
   background-color: #99e2d0;
 }
-main > .principal .general__chooses .general__choose .general__choose__slider .right-side .my-selection .fa-check {
+.general__choose__slider .my-selection .fa-check {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -537,29 +576,50 @@ main > .principal .general__chooses .general__choose .general__choose__slider .r
   border-radius: 50%;
   transform: scale(0.69);
 }
-main > .principal .general__chooses .general__choose:hover {
+
+.general__choose__slider:hover {
   cursor: pointer;
 }
-main > .principal .general__chooses .general__choose:hover .left-side {
-  width: 210px;
-  transition: 300ms;
+.general__choose__slider:hover .left-side {
+  -webkit-animation-name: reduce;
+          animation-name: reduce;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.general__choose__slider:hover .left-side > H4, .general__choose__slider:hover .left-side > .information {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: rgba(0, 128, 128, 0);
+  -webkit-animation-name: reduce;
+          animation-name: reduce;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
-main > .principal .general__chooses .general__choose:hover .left-side h4 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.general__choose__slider:hover .my-selection > .fa-check {
+  -webkit-animation-name: drive;
+          animation-name: drive;
+  -webkit-animation-duration: 350ms;
+          animation-duration: 350ms;
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
-main > .principal .general__chooses .general__choose:hover .left-side .infomration {
-  background-color: yellow;
-}
-main > .principal .general__chooses .general__choose:hover .right-side .fa-check {
-  -webkit-animation: drive 700ms 1 ease;
-          animation: drive 700ms 1 ease;
-}
+
 @-webkit-keyframes drive {
   0% {
     transform: rotate(0deg) scale(0.69);
@@ -568,6 +628,7 @@ main > .principal .general__chooses .general__choose:hover .right-side .fa-check
     transform: rotate(360deg) scale(0.69);
   }
 }
+
 @keyframes drive {
   0% {
     transform: rotate(0deg) scale(0.69);
@@ -576,14 +637,30 @@ main > .principal .general__chooses .general__choose:hover .right-side .fa-check
     transform: rotate(360deg) scale(0.69);
   }
 }
-main > .principal .ordering {
+@-webkit-keyframes reduce {
+  0% {
+    width: 270px;
+  }
+  100% {
+    width: 210px;
+  }
+}
+@keyframes reduce {
+  0% {
+    width: 270px;
+  }
+  100% {
+    width: 210px;
+  }
+}
+.principal > .ordering {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   margin-top: 36px;
 }
-main > .principal .ordering h5 {
+.principal > .ordering h5 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;

@@ -1,0 +1,241 @@
+/* À LA FRANÇAISE */
+/* HEADER */
+.heading-la-palette-du-gout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    padding: 0 23px;
+
+    a{
+        text-decoration: none;
+        color: $colorBlack;
+
+        .fas.fa-arrow-left{
+            position: absolute;
+            top: 20px;
+            left: 24px;
+        }
+    }
+}
+/* section visual */
+.visual{
+    display: flex;
+    flex-flow: column nowrap;
+    z-index: -1000;
+
+    figure{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 256px;
+        overflow: hidden;
+
+        img{
+            position: absolute;
+            object-fit: cover;
+            transform: scaleX(1.07);
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+/* section article */
+.principal{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: $backgroundGrey;
+    margin-top: -50px;
+    padding-bottom: 83px;
+    border-radius: 33px 33px 0 0;
+
+    .principal__title{
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 33px 38px 29px 18px;
+        h1{
+            font-family: 'Shrikhand', cursive;
+            font-size: 1.65rem;
+        }
+        #Capa_1{
+            position: absolute;
+            right: 38px;
+            top: 40px;
+        }
+    }
+}
+.general{
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+    height: 36px;
+
+    .general__border-entrees{
+        display: flex;
+        align-items: center;
+        height: 38px;
+        width: 60px;
+        background-image: linear-gradient(270deg, #eaeaea 18px, rgba(153, 226, 208,1) 18px);
+        
+        .entrees{
+            display: flex;
+            align-items: center;
+            height: 36px;
+            margin: -5px 0 0 -1px;
+            font-size: 0.85rem;
+            background-color: #eaeaea;
+            color: #1f1f1f;
+        }      
+    }
+}
+.general__chooses{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 14px;
+
+    .general__choose{
+        @include menuBoxShadow;
+        display: flex;
+        flex-flow: row nowrap;
+        width: 349px;
+        height: 68px;
+        margin-bottom: 14px;
+        background-color: $colorWhite;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+}
+.general__choose__slider{
+    display: flex;
+
+    .left-side{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        height: 100%;
+        width: 275px;
+        padding: 12px 0 12px 0;
+
+        h4{
+            font-size: 0.9rem; 
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;   
+            padding-left: 10px;
+        }
+
+        .information{
+            font-size: 0.78rem;
+            color: #303030;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            padding-left: 10px;
+        }
+    }
+
+    .right-side{
+        display: flex;
+        align-items: flex-end; 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .price{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 12px;
+            width: 80px;
+            height: 100%;
+            font-size: 0.8rem;
+            font-weight: bold;
+
+            .currency{
+                padding-left: 1px;
+                font-size: 0.8rem;
+                font-weight: bold;
+            }
+        }                   
+    }
+    
+    .my-selection{
+        @include rowTextCenter;
+        width: 60px;
+        height: 100%;
+        background-color: $backgroundColorNewProduct;
+                
+        .fa-check{
+            @include rowTextCenter;
+            color: #99e2d0;
+            padding: 6px;
+            background-color: $colorWhite;
+            border-radius: 50%;
+            transform: scale(0.69);      
+        }
+    }
+}
+.general__choose__slider:hover{
+    cursor: pointer;
+
+    .left-side{
+        animation-name: reduce;
+        animation-duration: 300ms;
+        animation-delay: 0;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+    .left-side > H4, .left-side > .information{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        animation-name: reduce;
+        animation-duration: 300ms;
+        animation-delay: 0;
+        animation-timing-function: linear;
+        animation-fill-mode: backwards;
+    }
+
+    .my-selection > .fa-check{
+        animation-name: drive;
+        animation-duration: 350ms;
+        animation-delay: 50ms;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+    }   
+}       
+@keyframes drive {
+    0%{
+        transform: rotate(0deg) scale(0.69);   
+    }
+    100%{
+        transform: rotate(360deg) scale(0.69);
+    }
+}
+@keyframes reduce {
+    0%{
+        width: 270px;
+    }
+    100%{
+        width: 210px;
+    }
+} 
+.principal > .ordering{
+    @include rowTextCenter;
+    margin-top: 36px;
+
+    h5{
+        @include rowTextCenter;
+        @include violetGradientButton;
+        @include boxShadowButton;
+        width: 186px;
+        height: 50px;
+        font-size: 0.9rem;
+        border-radius: 50px;
+        color: $colorWhite;
+    }
+}

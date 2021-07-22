@@ -1,0 +1,18 @@
+/* HEADER */
+header{
+    @include rowTextCenter;
+    position: relative;
+    height: 63px;
+    
+    .header__logo{
+        display: flex;
+        width: 164px;
+        height: 100%;
+        
+        img{
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -16,26 +16,6 @@ li {
   list-style: none;
 }
 
-/* HEADER */
-header {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 63px;
-}
-header .header__logo {
-  display: flex;
-  width: 164px;
-  height: 100%;
-}
-header .header__logo img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
 /* MAIN */
 main {
   display: flex;
@@ -344,6 +324,26 @@ main {
   font-size: 0.82rem;
 }
 
+/* HEADER */
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 63px;
+}
+header .header__logo {
+  display: flex;
+  width: 164px;
+  height: 100%;
+}
+header .header__logo img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
 /* FOOTER */
 footer {
   display: flex;
@@ -413,12 +413,6 @@ footer .footer__nav ul li .fa-hands-helping {
   left: 24px;
 }
 
-/* MAIN */
-main {
-  display: flex;
-  flex-flow: column nowrap;
-}
-
 /* section visual */
 .visual {
   display: flex;
@@ -483,10 +477,11 @@ main {
 .general .general__border-entrees .entrees {
   display: flex;
   align-items: center;
-  height: 35px;
-  margin-top: -3px;
+  height: 36px;
+  margin: -5px 0 0 -1px;
   font-size: 0.85rem;
   background-color: #eaeaea;
+  color: #1f1f1f;
 }
 
 .general__chooses {
@@ -521,14 +516,14 @@ main {
   padding: 12px 0 12px 0;
 }
 .general__choose__slider .left-side h4 {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 10px;
 }
 .general__choose__slider .left-side .information {
-  font-size: 0.83rem;
+  font-size: 0.78rem;
   color: #303030;
   white-space: nowrap;
   overflow: hidden;
@@ -675,4 +670,4 @@ main {
   font-size: 0.9rem;
   border-radius: 50px;
   color: #ffffff;
-}/*# sourceMappingURL=style.css.map */
+}

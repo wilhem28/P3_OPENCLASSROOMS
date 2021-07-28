@@ -1,6 +1,6 @@
-/* À LA FRANÇAISE */
+/* LA PALETTE DU GOÛT */
 /* HEADER */
-.heading-la-palette-du-gout{
+.heading {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,10 +55,12 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         padding: 33px 38px 29px 18px;
+
         h1{
             font-family: 'Shrikhand', cursive;
             font-size: 1.65rem;
         }
+
         #Capa_1{
             position: absolute;
             right: 38px;

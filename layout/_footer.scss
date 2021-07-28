@@ -9,8 +9,10 @@ footer{
     #societyName{
         display: flex;
         align-items: center;
-        font-family: 'Shrikhand', cursive;
-        font-size: 0.82rem;
+        font: {
+            family: 'Shrikhand', cursive;
+            size: 0.82rem;
+        }
         color: $colorWhite;
         width: 100px;
         padding-bottom: 18px;
@@ -44,8 +46,7 @@ footer{
                     display: flex;
                     align-items: center;
                     font-size: 0.7rem;
-                    margin-right: 7px;
-                    margin-left: -2px;
+                    margin: 0 7px 0 -2px;
                     transform: scale(0.7) rotate(-20deg);
                 }
             }

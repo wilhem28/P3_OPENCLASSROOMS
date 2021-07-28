@@ -22,6 +22,19 @@ main {
   flex-flow: column nowrap;
 }
 
+.description__btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(172deg, #eb72da 15%, #9d59dc 100%);
+  -o-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
+  -ms-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
+  height: 50px;
+  border-radius: 50px;
+}
+
 /* section location */
 .location {
   display: flex;
@@ -32,21 +45,21 @@ main {
   height: 50px;
   background-image: linear-gradient(180deg, rgba(183, 183, 183, 0.68) 0.05%, #eaeaea 7%);
 }
-.location .location__wrapper {
+.location__wrapper {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   width: 164px;
   height: 100%;
 }
-.location .location__wrapper .fas.fa-map-marker-alt {
+.location__wrapper > .fas.fa-map-marker-alt {
   display: flex;
   align-items: center;
   padding: 16px 17px 18px 0;
   font-size: 0.95rem;
   color: #353535;
 }
-.location .location__wrapper p {
+.location__wrapper > p {
   display: flex;
   align-items: center;
   padding: 16px 0;
@@ -63,33 +76,20 @@ main {
   padding: 41px 0 57px 0;
   background-color: #f6f6f6;
 }
-.description h1 {
+.description > h1 {
   text-align: center;
   font-size: 1.3rem;
   padding: 0 20.2% 14px 16.5%;
 }
-.description p {
+.description > p {
   text-align: center;
   padding: 0 8.8% 27px 10%;
   color: #414141;
 }
-.description .description__btn {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(172deg, #eb72da 15%, #9d59dc 100%);
-  -o-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
-  -ms-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.135);
+.description__btn {
   width: 210px;
-  height: 50px;
-  font-size: 0.9rem;
-  border-radius: 50px;
-  color: #ffffff;
-  overflow: hidden;
 }
-.description .description__btn a {
+.description__btn > a {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -98,7 +98,7 @@ main {
   width: 100%;
   height: 100%;
 }
-.description .description__btn a p {
+.description__btn > a > p {
   display: flex;
   flex-flow: row nowrap;
   color: #ffffff;
@@ -106,22 +106,22 @@ main {
   font-size: 0.9rem;
 }
 
-/* section notice */
+/* section operation */
 .operation {
   display: flex;
   flex-flow: column nowrap;
 }
-.operation .operation__title {
+.operation__title {
   display: flex;
   height: 103px;
   padding: 50px 5.33% 30px 5.33%;
 }
-.operation .operation__title h2 {
+.operation__title > h2 {
   font-size: 1.3rem;
 }
-.operation .operation__choices {
+.operation__choices {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: space-evenly;
   align-items: center;
   padding: 0 4.8% 44px 4.8%;
@@ -131,6 +131,7 @@ main {
   display: flex;
   align-items: center;
   width: 100%;
+  max-width: 327px;
   height: 73px;
   margin-bottom: 24px;
 }
@@ -192,32 +193,31 @@ main {
 .operation-choice .operation-description:hover .fa-list-ul, .operation-choice .operation-description:hover .fa-mobile-alt, .operation-choice .operation-description:hover .fa-store {
   color: #9356dc;
 }
-
-.operation-description.operation-description--selected {
+.operation-choice .operation-description--selected {
   background-color: #f5edff;
 }
-.operation-description.operation-description--selected .fa-store {
+.operation-choice .operation-description--selected .fa-store {
   margin-right: 19px;
   color: #9356dc;
   font-size: 1rem;
 }
 
 /* section restaurants */
-#restaurants {
+.restaurants {
   display: flex;
   flex-flow: column nowrap;
   background-color: #f6f6f6;
   padding: 0 5.33%;
 }
-#restaurants .restaurants__title {
+.restaurants__title {
   width: 100%;
   height: 104px;
   padding-top: 56px;
 }
-#restaurants .restaurants__title h2 {
+.restaurants__title > h2 {
   font-size: 1.3rem;
 }
-#restaurants .restaurants__examples {
+.restaurants > .restaurants__examples {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -234,7 +234,7 @@ main {
   color: #000000;
   margin-bottom: 18px;
 }
-.restaurants__examples a .restaurants__example {
+.restaurants__examples a > .restaurants__example {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
@@ -246,13 +246,13 @@ main {
   border-radius: 15px;
   overflow: hidden;
 }
-.restaurants__examples a .restaurants__example figure {
+.restaurants__examples a > .restaurants__example > figure {
   position: relative;
   display: flex;
   width: 100%;
   height: 100%;
 }
-.restaurants__examples a .restaurants__example figure img {
+.restaurants__examples a > .restaurants__example > figure img {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
@@ -261,11 +261,11 @@ main {
   width: 100%;
   height: 175px;
 }
-.restaurants__examples a .restaurants__example figure .position-center {
+.restaurants__examples a > .restaurants__example > figure .position-center {
   -o-object-position: 100% 62%;
      object-position: 100% 62%;
 }
-.restaurants__examples a .restaurants__example figure p {
+.restaurants__examples a > .restaurants__example > figure p {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -281,7 +281,7 @@ main {
   font-weight: 900;
   border-radius: 2px;
 }
-.restaurants__examples a .restaurants__example .container_description {
+.restaurants__examples a > .restaurants__example > .container_description {
   display: grid;
   grid-template-columns: 9fr 1fr;
   grid-template-rows: repeat(2, 1fr);
@@ -289,24 +289,24 @@ main {
   background-color: #ffffff;
   height: 76px;
 }
-.restaurants__examples a .restaurants__example .container_description .society {
+.restaurants__examples a > .restaurants__example > .container_description > .society {
   display: flex;
   font-size: 0.82rem;
   font-weight: bold;
 }
-.restaurants__examples a .restaurants__example .container_description .container-heart {
+.restaurants__examples a > .restaurants__example > .container_description > .container-heart {
   position: relative;
   display: grid;
   grid-column: 2;
   grid-row: span 2;
 }
-.restaurants__examples a .restaurants__example .container_description .container-heart .Capa_1 {
+.restaurants__examples a > .restaurants__example > .container_description > .container-heart .Capa_1 {
   position: absolute;
   display: flex;
   top: 5px;
   transform: scale(0.999);
 }
-.restaurants__examples a .restaurants__example .container_description .container-heart .Capa_2 {
+.restaurants__examples a > .restaurants__example > .container_description > .container-heart .Capa_2 {
   position: absolute;
   top: 5px;
   display: flex;
@@ -315,11 +315,11 @@ main {
   transition-property: opacity;
   transition-timing-function: ease-in-out;
 }
-.restaurants__examples a .restaurants__example .container_description .container-heart .Capa_2:hover {
+.restaurants__examples a > .restaurants__example > .container_description > .container-heart .Capa_2:hover {
   opacity: 1;
   z-index: 1000;
 }
-.restaurants__examples a .restaurants__example .container_description p {
+.restaurants__examples a > .restaurants__example > .container_description > p {
   display: flex;
   font-size: 0.82rem;
 }
@@ -389,25 +389,24 @@ footer .footer__nav ul li .fa-hands-helping {
   display: flex;
   align-items: center;
   font-size: 0.7rem;
-  margin-right: 7px;
-  margin-left: -2px;
+  margin: 0 7px 0 -2px;
   transform: scale(0.7) rotate(-20deg);
 }
 
-/* À LA FRANÇAISE */
+/* LA PALETTE DU GOÛT */
 /* HEADER */
-.heading-la-palette-du-gout {
+.heading {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 63px;
   padding: 0 23px;
 }
-.heading-la-palette-du-gout a {
+.heading a {
   text-decoration: none;
   color: #000000;
 }
-.heading-la-palette-du-gout a .fas.fa-arrow-left {
+.heading a .fas.fa-arrow-left {
   position: absolute;
   top: 20px;
   left: 24px;
@@ -670,4 +669,4 @@ footer .footer__nav ul li .fa-hands-helping {
   font-size: 0.9rem;
   border-radius: 50px;
   color: #ffffff;
-}
+}/*# sourceMappingURL=style.css.map */

@@ -488,6 +488,7 @@ footer .footer__nav ul li .fa-hands-helping {
   flex-flow: row wrap;
   justify-content: space-around;
   margin: 14px;
+  overflow: hidden;
 }
 .general__chooses .general__choose {
   -o-box-shadow: 0 0 5px 5px rgba(212, 212, 212, 0.23);
@@ -502,6 +503,36 @@ footer .footer__nav ul li .fa-hands-helping {
   border-radius: 15px;
   overflow: hidden;
 }
+.general__chooses .general__choose:nth-child(1) {
+  -webkit-animation-name: start;
+          animation-name: start;
+  -webkit-animation-duration: 2750ms;
+          animation-duration: 2750ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.general__chooses .general__choose:nth-child(2) {
+  -webkit-animation-name: start;
+          animation-name: start;
+  -webkit-animation-duration: 2750ms;
+          animation-duration: 2750ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.general__chooses .general__choose:nth-child(3) {
+  -webkit-animation-name: start;
+          animation-name: start;
+  -webkit-animation-duration: 2750ms;
+          animation-duration: 2750ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
 
 .general__choose__slider {
   display: flex;
@@ -513,7 +544,7 @@ footer .footer__nav ul li .fa-hands-helping {
   height: 100%;
   width: 275px;
   padding: 12px 0 12px 0;
-  transition: width 400ms ease-in-out;
+  transition: width 400ms ease-out;
 }
 .general__choose__slider .left-side h4 {
   font-size: 0.9rem;
@@ -604,6 +635,26 @@ footer .footer__nav ul li .fa-hands-helping {
   }
   100% {
     transform: rotate(360deg) scale(0.69);
+  }
+}
+@-webkit-keyframes start {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes start {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .principal > .ordering {

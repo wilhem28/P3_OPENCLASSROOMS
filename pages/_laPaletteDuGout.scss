@@ -120,6 +120,7 @@
         height: 100%;
         width: 275px;
         padding: 12px 0 12px 0;
+        transition: width 400ms ease-in-out;
 
         h4{
             font-size: 0.9rem; 
@@ -184,30 +185,17 @@
     cursor: pointer;
 
     .left-side{
-        animation-name: reduce;
-        animation-duration: 300ms;
-        animation-delay: 0;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards;
+        width: 210px;
     }
 
     .left-side > H4, .left-side > .information{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        animation-name: reduce;
-        animation-duration: 300ms;
-        animation-delay: 0;
-        animation-timing-function: linear;
-        animation-fill-mode: backwards;
     }
 
     .my-selection > .fa-check{
-        animation-name: drive;
-        animation-duration: 350ms;
-        animation-delay: 50ms;
-        animation-iteration-count: 1;
-        animation-timing-function: ease;
+        animation: 400ms ease-in-out 50ms 1 drive;
     }   
 }       
 @keyframes drive {
@@ -218,14 +206,7 @@
         transform: rotate(360deg) scale(0.69);
     }
 }
-@keyframes reduce {
-    0%{
-        width: 270px;
-    }
-    100%{
-        width: 210px;
-    }
-} 
+
 .principal > .ordering{
     @include rowTextCenter;
     margin-top: 36px;

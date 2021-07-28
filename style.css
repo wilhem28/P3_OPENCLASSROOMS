@@ -513,6 +513,7 @@ footer .footer__nav ul li .fa-hands-helping {
   height: 100%;
   width: 275px;
   padding: 12px 0 12px 0;
+  transition: width 400ms ease-in-out;
 }
 .general__choose__slider .left-side h4 {
   font-size: 0.9rem;
@@ -576,43 +577,16 @@ footer .footer__nav ul li .fa-hands-helping {
   cursor: pointer;
 }
 .general__choose__slider:hover .left-side {
-  -webkit-animation-name: reduce;
-          animation-name: reduce;
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  width: 210px;
 }
 .general__choose__slider:hover .left-side > H4, .general__choose__slider:hover .left-side > .information {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-animation-name: reduce;
-          animation-name: reduce;
-  -webkit-animation-duration: 300ms;
-          animation-duration: 300ms;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
 }
 .general__choose__slider:hover .my-selection > .fa-check {
-  -webkit-animation-name: drive;
-          animation-name: drive;
-  -webkit-animation-duration: 350ms;
-          animation-duration: 350ms;
-  -webkit-animation-delay: 50ms;
-          animation-delay: 50ms;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
+  -webkit-animation: 400ms ease-in-out 50ms 1 drive;
+          animation: 400ms ease-in-out 50ms 1 drive;
 }
 
 @-webkit-keyframes drive {
@@ -630,22 +604,6 @@ footer .footer__nav ul li .fa-hands-helping {
   }
   100% {
     transform: rotate(360deg) scale(0.69);
-  }
-}
-@-webkit-keyframes reduce {
-  0% {
-    width: 270px;
-  }
-  100% {
-    width: 210px;
-  }
-}
-@keyframes reduce {
-  0% {
-    width: 270px;
-  }
-  100% {
-    width: 210px;
   }
 }
 .principal > .ordering {

@@ -506,8 +506,8 @@ footer .footer__nav ul li .fa-hands-helping {
 .general__chooses .general__choose:nth-child(1) {
   -webkit-animation-name: start;
           animation-name: start;
-  -webkit-animation-duration: 2750ms;
-          animation-duration: 2750ms;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
   -webkit-animation-delay: 100ms;
           animation-delay: 100ms;
   -webkit-animation-timing-function: ease-in-out;
@@ -516,8 +516,8 @@ footer .footer__nav ul li .fa-hands-helping {
 .general__chooses .general__choose:nth-child(2) {
   -webkit-animation-name: start;
           animation-name: start;
-  -webkit-animation-duration: 2750ms;
-          animation-duration: 2750ms;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
   -webkit-animation-delay: 200ms;
           animation-delay: 200ms;
   -webkit-animation-timing-function: ease-in-out;
@@ -526,10 +526,20 @@ footer .footer__nav ul li .fa-hands-helping {
 .general__chooses .general__choose:nth-child(3) {
   -webkit-animation-name: start;
           animation-name: start;
-  -webkit-animation-duration: 2750ms;
-          animation-duration: 2750ms;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
   -webkit-animation-delay: 300ms;
           animation-delay: 300ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+.general__chooses .general__choose:nth-child(4) {
+  -webkit-animation-name: start;
+          animation-name: start;
+  -webkit-animation-duration: 2000ms;
+          animation-duration: 2000ms;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
 }

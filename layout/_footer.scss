@@ -1,12 +1,14 @@
 /* FOOTER */
-footer{
+footer {
+    position: static;
+    bottom: 0;
     display: flex;
     flex-flow: column nowrap;
     padding: 25px 6.66% 35px 6.66%;
     width: 100%;
     background-color: #353535;
 
-    #societyName{
+    #societyName {
         display: flex;
         align-items: center;
         font: {
@@ -18,23 +20,23 @@ footer{
         padding-bottom: 18px;
         letter-spacing: 0.5px;
     }
-    .footer__nav{
+    .footer__nav {
         display: flex;
 
-        ul{
+        ul {
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-between;
             height: 80px;
 
-            li{
+            li {
                 display: flex;
                 justify-content: flex-start;
                 flex-flow: row nowrap;
                 color: $colorWhite;
                 font-size: 0.73rem;
 
-                .fa-utensils{
+                .fa-utensils {
                     display: flex;
                     align-items: flex-start;
                     font-size: 0.7rem;
@@ -42,7 +44,7 @@ footer{
                     transform: scaleY(0.85);
                 }
 
-                .fa-hands-helping{
+                .fa-hands-helping {
                     display: flex;
                     align-items: center;
                     font-size: 0.7rem;

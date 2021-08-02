@@ -7,11 +7,11 @@
     height: 63px;
     padding: 0 23px;
 
-    a{
+    a {
         text-decoration: none;
         color: $colorBlack;
 
-        .fas.fa-arrow-left{
+        .fas.fa-arrow-left {
             position: absolute;
             top: 20px;
             left: 24px;
@@ -19,19 +19,19 @@
     }
 }
 /* section visual */
-.visual{
+.visual {
     display: flex;
     flex-flow: column nowrap;
     z-index: -1000;
 
-    figure{
+    figure {
         position: relative;
         display: flex;
         width: 100%;
         height: 256px;
         overflow: hidden;
 
-        img{
+        img {
             position: absolute;
             object-fit: cover;
             transform: scaleX(1.07);
@@ -41,47 +41,51 @@
     }
 }
 /* section article */
-.principal{
+.principal {
     display: flex;
     flex-flow: column nowrap;
     background-color: $backgroundGrey;
     margin-top: -50px;
     padding-bottom: 83px;
     border-radius: 33px 33px 0 0;
+    @media  screen and (min-width: 425px) {
+        margin-top: -28px; 
+    }
 
-    .principal__title{
+    .principal__title {
         position: relative;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         padding: 33px 38px 29px 18px;
 
-        h1{
+        h1 {
             font-family: 'Shrikhand', cursive;
             font-size: 1.65rem;
         }
 
-        #Capa_1{
+        #Capa_1 {
             position: absolute;
             right: 38px;
             top: 40px;
+            transform: scale(1.1);
         }
     }
 }
-.general{
+.general {
     display: flex;
     align-items: center;
     padding-left: 18px;
     height: 36px;
 
-    .general__border-entrees{
+    .general__border-entrees {
         display: flex;
         align-items: center;
         height: 38px;
         width: 60px;
         background-image: linear-gradient(270deg, #eaeaea 18px, rgba(153, 226, 208,1) 18px);
         
-        .entrees{
+        .entrees {
             display: flex;
             align-items: center;
             height: 36px;
@@ -92,13 +96,22 @@
         }      
     }
 }
-.general__chooses{
+.general__chooses {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     margin: 14px;
     overflow: hidden;
-
+    @media screen and (min-width: 725px){
+        display: grid;
+        grid-template: repeat(2, 1fr ) / repeat(2, 1fr);
+        grid-gap: 5px;
+        grid-column: 2 / span 2;
+        justify-items: center;
+        background-color: #ffffff60;
+        padding-top: 14px;
+        border-radius: 15px;
+    }
     .general__choose {
         @include menuBoxShadow;
         display: flex;
@@ -113,16 +126,16 @@
             &:nth-child(#{$i}) {
             animation-name: start;
             animation-duration: 2000ms;
-            animation-delay: $i * 100ms;
+            animation-delay: $i * 130ms;
             animation-timing-function: ease-in-out;
             }
         }
     }
 }
-.general__choose__slider{
+.general__choose__slider {
     display: flex;
 
-    .left-side{
+    .left-side {
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
@@ -131,7 +144,7 @@
         padding: 12px 0 12px 0;
         transition: width 400ms ease-out;
 
-        h4{
+        h4 {
             font-size: 0.9rem; 
             white-space: nowrap;
             overflow: hidden;
@@ -139,7 +152,7 @@
             padding-left: 10px;
         }
 
-        .information{
+        .information {
             font-size: 0.78rem;
             color: #303030;
             white-space: nowrap;
@@ -149,14 +162,14 @@
         }
     }
 
-    .right-side{
+    .right-side {
         display: flex;
         align-items: flex-end; 
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
 
-        .price{
+        .price {
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -166,7 +179,7 @@
             font-size: 0.8rem;
             font-weight: bold;
 
-            .currency{
+            .currency {
                 padding-left: 1px;
                 font-size: 0.8rem;
                 font-weight: bold;
@@ -174,13 +187,13 @@
         }                   
     }
     
-    .my-selection{
+    .my-selection {
         @include rowTextCenter;
         width: 60px;
         height: 100%;
         background-color: $backgroundColorNewProduct;
                 
-        .fa-check{
+        .fa-check {
             @include rowTextCenter;
             color: #99e2d0;
             padding: 6px;
@@ -190,28 +203,28 @@
         }
     }
 }
-.general__choose__slider:hover{
+.general__choose__slider:hover {
     cursor: pointer;
 
-    .left-side{
+    .left-side {
         width: 210px;
     }
 
-    .left-side > H4, .left-side > .information{
+    .left-side > H4, .left-side > .information {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    .my-selection > .fa-check{
+    .my-selection > .fa-check {
         animation: 400ms ease-in-out 50ms 1 drive;
     }   
 }       
 @keyframes drive {
-    0%{
+    0% {
         transform: rotate(0deg) scale(0.69);   
     }
-    100%{
+    100% {
         transform: rotate(360deg) scale(0.69);
     }
 }
@@ -225,19 +238,14 @@
         opacity: 1;
     }
 }
-
-.principal > .ordering{
+.principal > .ordering {
     @include rowTextCenter;
     margin-top: 36px;
 
-    h5{
-        @include rowTextCenter;
-        @include violetGradientButton;
-        @include boxShadowButton;
+    h5 {
+        @include btn;
         width: 186px;
-        height: 50px;
-        font-size: 0.9rem;
-        border-radius: 50px;
-        color: $colorWhite;
+        font-size: 0.9rem
+        
     }
 }

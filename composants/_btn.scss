@@ -1,0 +1,14 @@
+@mixin btn{
+    @include rowTextCenter;
+    @include violetGradientButton(172deg, #eb72da, 15%, #9d59dc, 100%);
+    @include boxShadowButton (0, 5px, 5px, 0, rgb(159, 159, 159));
+    height: 50px;
+    color: $colorWhite;
+    border-radius: 50px;
+    cursor: pointer;
+    &:hover{
+        @include boxShadowButtonDarken (0, 5px, 5px, 0, rgb(159, 159, 159));
+        @include violetGradientButtonLighten(172deg, #eb72da, 15%, #9d59dc, 100%);
+        color: whitesmoke;
+    }
+}

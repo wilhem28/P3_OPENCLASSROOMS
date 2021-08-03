@@ -127,7 +127,7 @@
             animation-name: start;
             animation-duration: 2000ms;
             animation-delay: $i * 130ms;
-            animation-timing-function: ease-in-out;
+            animation-timing-function: ease-out;
             }
         }
     }
@@ -217,7 +217,7 @@
     }
 
     .my-selection > .fa-check {
-        animation: 400ms ease-in-out 50ms 1 drive;
+        animation: 400ms ease 100ms 1 drive;
     }   
 }       
 @keyframes drive {

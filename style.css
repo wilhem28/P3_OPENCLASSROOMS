@@ -28,111 +28,6 @@ main {
   flex-flow: column nowrap;
 }
 
-.loading {
-  position: fixed;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  z-index: 1000;
-  -webkit-animation: load-spider 3000ms ease-in-out forwards;
-          animation: load-spider 3000ms ease-in-out forwards;
-}
-.loading::after {
-  content: "";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10vw;
-  height: 10vw;
-  border-style: double;
-  border-color: whitesmoke;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-  border-width: 10px;
-  border-radius: 50%;
-  -webkit-animation: spin 2000ms linear 1 forwards;
-          animation: spin 2000ms linear 1 forwards;
-}
-
-@-webkit-keyframes load-spider {
-  0% {
-    opacity: 0.92;
-  }
-  50% {
-    opacity: 0.9;
-  }
-  75% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
-@keyframes load-spider {
-  0% {
-    opacity: 0.92;
-  }
-  50% {
-    opacity: 0.9;
-  }
-  75% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(100deg);
-  }
-  40% {
-    transform: rotate(150deg);
-  }
-  60% {
-    transform: rotate(200deg);
-  }
-  80% {
-    transform: rotate(300deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0;
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(100deg);
-  }
-  40% {
-    transform: rotate(150deg);
-  }
-  60% {
-    transform: rotate(200deg);
-  }
-  80% {
-    transform: rotate(300deg);
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0;
-  }
-}
 /* section location */
 .location {
   display: flex;
@@ -364,28 +259,28 @@ main {
 }
 
 /* section restaurants */
-.restaurants {
+#restaurants {
   display: flex;
   flex-flow: column nowrap;
   background-color: #f6f6f6;
   padding: 0 5.33%;
 }
-.restaurants__title {
+#restaurants__title {
   width: 100%;
   height: 104px;
   padding-top: 56px;
 }
-.restaurants__title > h2 {
+#restaurants__title > h2 {
   font-size: 1.3rem;
 }
-.restaurants > .restaurants__examples {
+#restaurants > .restaurants__examples {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   padding-bottom: 46px;
 }
 @media screen and (min-width: 1124px) {
-  .restaurants > .restaurants__examples {
+  #restaurants > .restaurants__examples {
     display: grid;
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
     justify-items: center;
@@ -695,8 +590,8 @@ footer .footer__nav ul li .fa-hands-helping {
           animation-duration: 2000ms;
   -webkit-animation-delay: 130ms;
           animation-delay: 130ms;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 .general__chooses .general__choose:nth-child(2) {
   -webkit-animation-name: start;
@@ -705,8 +600,8 @@ footer .footer__nav ul li .fa-hands-helping {
           animation-duration: 2000ms;
   -webkit-animation-delay: 260ms;
           animation-delay: 260ms;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 .general__chooses .general__choose:nth-child(3) {
   -webkit-animation-name: start;
@@ -715,8 +610,8 @@ footer .footer__nav ul li .fa-hands-helping {
           animation-duration: 2000ms;
   -webkit-animation-delay: 390ms;
           animation-delay: 390ms;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 .general__chooses .general__choose:nth-child(4) {
   -webkit-animation-name: start;
@@ -725,8 +620,8 @@ footer .footer__nav ul li .fa-hands-helping {
           animation-duration: 2000ms;
   -webkit-animation-delay: 520ms;
           animation-delay: 520ms;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 .general__choose__slider {
@@ -811,8 +706,8 @@ footer .footer__nav ul li .fa-hands-helping {
   text-overflow: ellipsis;
 }
 .general__choose__slider:hover .my-selection > .fa-check {
-  -webkit-animation: 400ms ease-in-out 50ms 1 drive;
-          animation: 400ms ease-in-out 50ms 1 drive;
+  -webkit-animation: 400ms ease 100ms 1 drive;
+          animation: 400ms ease 100ms 1 drive;
 }
 
 @-webkit-keyframes drive {
@@ -877,4 +772,110 @@ footer .footer__nav ul li .fa-hands-helping {
   box-shadow: 0 5px 5px 0 #909090;
   background: linear-gradient(172deg, #ee84df 15%, #a76ae0 100%);
   color: whitesmoke;
+}
+
+.loading {
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  z-index: 1000;
+  -webkit-animation: load-spider 3000ms ease-in-out forwards;
+          animation: load-spider 3000ms ease-in-out forwards;
+}
+.loading::after {
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10vw;
+  height: 10vw;
+  border-style: double;
+  border-color: whitesmoke;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-width: 10px;
+  border-radius: 50%;
+  -webkit-animation: spin 2000ms linear 1 forwards;
+          animation: spin 2000ms linear 1 forwards;
+}
+
+@-webkit-keyframes load-spider {
+  0% {
+    opacity: 0.92;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes load-spider {
+  0% {
+    opacity: 0.92;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(100deg);
+  }
+  40% {
+    transform: rotate(150deg);
+  }
+  60% {
+    transform: rotate(200deg);
+  }
+  80% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(100deg);
+  }
+  40% {
+    transform: rotate(150deg);
+  }
+  60% {
+    transform: rotate(200deg);
+  }
+  80% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

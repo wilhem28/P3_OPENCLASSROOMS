@@ -216,7 +216,7 @@
     background-color: $backgroundLightGrey;
     padding: 0 5.33%;
 
-    &__title{
+    .restaurants__title{
         width: 100%;
         height: 104px;
         padding-top: 56px;
@@ -325,10 +325,11 @@
                     transition-property: opacity;
                     transition-duration: 200ms;
                     transition-timing-function: ease-in-out;
-                    
+
                     &:hover{
                         opacity: 1;
                         z-index: 1000;
+
                     }
                 }
             }

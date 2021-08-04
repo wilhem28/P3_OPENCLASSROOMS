@@ -42,7 +42,6 @@ main {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  width: 164px;
   height: 100%;
 }
 .location__wrapper > .fas.fa-map-marker-alt {
@@ -59,6 +58,11 @@ main {
   padding: 16px 0;
   font-size: 0.93rem;
   color: #353535;
+}
+@media screen and (max-width: 330px) {
+  .location__wrapper > p {
+    font-size: 4.5vw;
+  }
 }
 
 /* section description */
@@ -116,7 +120,7 @@ main {
 }
 @media screen and (max-width: 330px) {
   .description__btn > a > p {
-    font-size: 4vw;
+    font-size: 4.5vw;
   }
 }
 
@@ -540,27 +544,36 @@ footer .footer__nav ul li .fa-hands-helping {
   }
 }
 .principal .principal__title {
-  position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   padding: 33px 38px 29px 18px;
 }
 .principal .principal__title h1 {
+  display: flex;
   font-family: "Shrikhand", cursive;
-  font-size: 1.65rem;
+  font-size: 1.7rem;
+}
+@media screen and (max-width: 374px) {
+  .principal .principal__title h1 {
+    font-size: 7vw;
+  }
 }
 .principal .principal__title #Capa_1 {
-  position: absolute;
-  right: 38px;
-  top: 40px;
+  display: flex;
+  margin-top: 8px;
   transform: scale(1.1);
+}
+@media screen and (max-width: 374px) {
+  .principal .principal__title #Capa_1 {
+    transform: scale(0.9);
+  }
 }
 
 .general {
   display: flex;
   align-items: center;
-  padding-left: 18px;
+  padding-left: 20px;
   height: 36px;
 }
 .general .general__border-entrees {
@@ -568,14 +581,14 @@ footer .footer__nav ul li .fa-hands-helping {
   align-items: center;
   height: 38px;
   width: 60px;
-  background-image: linear-gradient(270deg, #eaeaea 18px, #99e2d0 18px);
+  background-image: linear-gradient(275deg, #eaeaea 18px, #99e2d0 18px);
 }
 .general .general__border-entrees .entrees {
   display: flex;
   align-items: center;
   height: 36px;
   margin: -5px 0 0 -1px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   background-color: #eaeaea;
   color: #1f1f1f;
 }
@@ -666,14 +679,14 @@ footer .footer__nav ul li .fa-hands-helping {
   transition: width 400ms ease-out;
 }
 .general__choose__slider .left-side h4 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 10px;
 }
 .general__choose__slider .left-side .information {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: #303030;
   white-space: nowrap;
   overflow: hidden;
@@ -831,19 +844,31 @@ footer .footer__nav ul li .fa-hands-helping {
   border-bottom-color: transparent;
   border-width: 10px;
   border-radius: 50%;
-  -webkit-animation: spin 2000ms linear 1 forwards;
-          animation: spin 2000ms linear 1 forwards;
+  -webkit-animation: spin 2500ms linear 1 forwards;
+          animation: spin 2500ms linear 1 forwards;
 }
 
 @-webkit-keyframes load-spider {
   0% {
-    opacity: 0.92;
+    opacity: 0.95;
+  }
+  30% {
+    opacity: 0.95;
+  }
+  40% {
+    opacity: 0.55;
   }
   50% {
-    opacity: 0.9;
+    opacity: 0.4;
   }
-  75% {
-    opacity: 0.9;
+  60% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.1;
   }
   100% {
     opacity: 0;
@@ -853,13 +878,25 @@ footer .footer__nav ul li .fa-hands-helping {
 
 @keyframes load-spider {
   0% {
-    opacity: 0.92;
+    opacity: 0.95;
+  }
+  30% {
+    opacity: 0.95;
+  }
+  40% {
+    opacity: 0.55;
   }
   50% {
-    opacity: 0.9;
+    opacity: 0.4;
   }
-  75% {
-    opacity: 0.9;
+  60% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.1;
   }
   100% {
     opacity: 0;

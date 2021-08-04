@@ -67,7 +67,7 @@ main {
   flex-flow: column nowrap;
   align-items: center;
   width: 100%;
-  padding: 41px 0 57px 0;
+  padding: 41px 5.33% 57px 5.33%;
   background-color: #f6f6f6;
 }
 .description > h1 {
@@ -91,7 +91,7 @@ main {
   color: #ffffff;
   border-radius: 50px;
   cursor: pointer;
-  width: 210px;
+  max-width: 210px;
 }
 .description__btn:hover {
   box-shadow: 0 5px 5px 0 #909090;
@@ -113,6 +113,11 @@ main {
   color: #ffffff;
   padding: 0 20px;
   font-size: 0.9rem;
+}
+@media screen and (max-width: 330px) {
+  .description__btn > a > p {
+    font-size: 4vw;
+  }
 }
 
 /* section operation */

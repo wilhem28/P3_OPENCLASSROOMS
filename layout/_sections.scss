@@ -37,7 +37,7 @@
     flex-flow: column nowrap;
     align-items: center;
     width: 100%;
-    padding: 41px 0 57px 0;
+    padding: 41px 5.33% 57px 5.33%;
     background-color: $backgroundLightGrey;
 
     > h1{
@@ -54,7 +54,7 @@
 
     &__btn{
         @include btn;
-        width: 210px;
+        max-width: 210px;
 
         > a{
             @include rowTextCenter;
@@ -68,6 +68,9 @@
                 color: $colorWhite;
                 padding: 0 20px;
                 font-size: 0.9rem;
+                @media screen and (max-width: 330px){
+                    font-size: 4vw;
+                }
             }
         }
     } 

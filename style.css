@@ -54,6 +54,7 @@ main {
 }
 .location__wrapper > p {
   display: flex;
+  flex-flow: row nowrap;
   align-items: center;
   padding: 16px 0;
   font-size: 0.93rem;
@@ -206,6 +207,7 @@ main {
 .operation-choice .operation-description .fa-mobile-alt {
   display: flex;
   margin-right: 19px;
+  width: 20px;
   color: grey;
   font-size: 1.2rem;
 }
@@ -235,6 +237,11 @@ main {
 .operation-choice .operation-description p {
   font-size: 0.95rem;
   font-weight: bolder;
+}
+@media screen and (max-width: 330px) {
+  .operation-choice .operation-description p {
+    font-size: 4.5vw;
+  }
 }
 .operation-choice .operation-description:hover {
   background-color: #f5edff;
@@ -286,16 +293,28 @@ main {
     justify-items: center;
   }
 }
+@media screen and (min-width: 1924px) {
+  #restaurants > .restaurants__examples {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+}
 
 .restaurants__examples a {
   display: flex;
   width: 100%;
-  min-width: 280px;
+  min-width: 200px;
   max-width: 400px;
   height: 251px;
   text-decoration: none;
   color: #000000;
   margin-bottom: 18px;
+}
+@media screen and (min-width: 1924px) {
+  .restaurants__examples a {
+    width: 25%;
+    height: 320px;
+  }
 }
 .restaurants__examples a > .restaurants__example {
   display: flex;
@@ -322,6 +341,11 @@ main {
   width: 100%;
   height: 175px;
 }
+@media screen and (min-width: 1924px) {
+  .restaurants__examples a > .restaurants__example > figure img {
+    height: 244px;
+  }
+}
 .restaurants__examples a > .restaurants__example > figure .position-center {
   -o-object-position: 100% 62%;
      object-position: 100% 62%;
@@ -333,7 +357,7 @@ main {
   align-items: center;
   width: 81px;
   height: 29px;
-  left: 70.64%;
+  right: 5%;
   top: 19px;
   color: #008766;
   background-color: #99e2d0;

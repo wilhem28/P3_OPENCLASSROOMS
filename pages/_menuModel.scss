@@ -109,14 +109,14 @@
     justify-content: space-around;
     margin: 14px;
     overflow: hidden;
-    @media screen and (min-width: 725px){
+    @media screen and (min-width: 800px){
         display: grid;
-        grid-template: repeat(2, 1fr ) / repeat(2, 1fr);
-        grid-gap: 5px;
+        grid-template-columns: repeat(2, 1fr );
+        grid-column-gap: 5px;
         grid-column: 2 / span 2;
         justify-items: center;
         background-color: #ffffff60;
-        padding-top: 14px;
+        padding: 14px 14px 0 14px;
         border-radius: 15px;
     }
     .general__choose {

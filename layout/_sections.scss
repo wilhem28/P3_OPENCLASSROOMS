@@ -26,11 +26,8 @@
             flex-flow: row nowrap;
             align-items: center;
             padding: 16px 0;
-            font-size: 0.93rem;
+            font-weight: 400;
             color: #353535;
-            @media screen and (max-width: 330px){
-                font-size: 4.5vw;
-            }
         }
     }
 }
@@ -45,21 +42,24 @@
 
     > h1{
         text-align: center;
-        font-size: 1.3rem;
-        padding: 0 10% 14px 7.5%; 
+        font-size: 1.4rem;
+        padding: 0 12% 14px 8%; 
         
     }
 
     > p{
         text-align: center;
-        padding: 0 4% 27px 6%;
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 0 0 27px 0;
         color: #414141;
        
     }
 
     &__btn{
+        @include rowTextCenter;
         @include btn;
-        max-width: 210px;
+        max-width: 222px;
 
         > a{
             @include rowTextCenter;
@@ -70,11 +70,13 @@
             > p{
                 display: flex;
                 flex-flow: row nowrap;
+                justify-content: center;
                 color: $colorWhite;
                 padding: 0 20px;
                 font-size: 0.9rem;
                 @media screen and (max-width: 330px){
-                    font-size: 4.5vw;
+                    font-size: 0.7rem;
+                    width: 180px;
                 }
             }
         }
@@ -91,7 +93,7 @@
         padding: 50px  5.33% 30px 5.33%;
 
         > h2{
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
     }
 
@@ -168,6 +170,7 @@
             color: grey;
             font-size: 1.2rem;
             @media screen and (min-width: 1124px){
+                justify-content: center;
                 margin-right: 0;
                 margin-bottom: 19px;
                 transform: scale(1.5);
@@ -191,8 +194,8 @@
 
         p{
             font: {
-                size: 0.86rem;
-                weight: bolder;
+                size: 0.9rem;
+                weight: 600;
             }
             @media screen and (max-width:330px){
                 font-size: 4.5vw;
@@ -214,8 +217,8 @@
                 color: $colorViolet;
                 font-size: 1rem;
                 @media screen and (min-width: 1124px){
-                margin-right: 0;
-                margin-bottom: 19px;
+                    margin-right: 0;
+                    margin-bottom: 19px;
                 }
             }
         } 
@@ -235,7 +238,7 @@
         padding-top: 56px;
 
         > h2{
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
     }
     > .restaurants__examples{
@@ -309,8 +312,10 @@
                 top: 19px;
                 color: $colorNewProduct;
                 background-color: $backgroundColorNewProduct;
-                font-size: 0.7rem;
-                font-weight: 900;
+                font: {
+                    size: 0.7rem;
+                    weight: 700;
+                }
                 border-radius: 2px;
             }
         }
@@ -325,8 +330,8 @@
             > .society{
                 display: flex;
                 font: {
-                    size: 0.82rem;
-                    weight: bold;
+                    size: 1.05rem;
+                    weight: 600;
                 }
             }
             > .container-heart{
@@ -361,7 +366,10 @@
 
             > p{
                 display: flex;
-                font-size: 0.82rem;
+                font: {
+                    size: 1rem;
+                    weight: 300;
+                }
             }
         }
     } 

@@ -5,7 +5,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: black;
+    background-color: $colorWhite;
     z-index: 1000;
     animation: load-spider 3000ms ease-in-out forwards;
     // cursor: wait;
@@ -18,7 +18,7 @@
         width: 10vw;
         height: 10vw;
         border-style: double;
-        border-color: whitesmoke;
+        border-color: #9356DC;;
         border-top-color: transparent;
         border-bottom-color: transparent;
         border-width: 10px;

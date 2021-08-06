@@ -35,3 +35,52 @@
     -ms-box-shadow: 0 0 5px 5px rgba(212, 212, 212, 0.23);
     box-shadow: 0 0 5px 5px rgba(212, 212, 212, 0.23);
 }
+@mixin heart-animation {
+    position: relative; 
+    display: grid;
+    grid-column: 2;
+    grid-row: span 2;   
+                        
+    .Capa_1{
+        position: absolute;
+        display: flex;
+        top: 5px;        
+    }
+
+    .Capa_2{
+        position: absolute;
+        top: 5px;
+        display: flex;
+        opacity: 0;
+        transition: opacity 500ms ease;
+        
+        &:hover{
+                opacity: 1;
+                z-index: 1000;
+        }
+    }
+}
+@mixin heart-animation2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .Capa_3 {
+        position: absolute;
+        transform: scale(1.15);
+    }
+    .Capa_4 {
+        transform: scale(1.15);
+        opacity: 0;
+        cursor: pointer;
+        transition: opacity 500ms ease;
+        &:hover {
+            opacity: 1;
+            
+        }
+    }
+    @media screen and (max-width: 374px){
+        transform: scale(0.9);
+        font-size: 5vw;
+    }
+}

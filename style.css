@@ -401,16 +401,13 @@ main {
   position: absolute;
   display: flex;
   top: 5px;
-  transform: scale(0.98);
 }
 .restaurants__examples a > .restaurants__example > .container_description > .container-heart .Capa_2 {
   position: absolute;
   top: 5px;
   display: flex;
   opacity: 0;
-  transition-property: opacity;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
+  transition: opacity 500ms ease;
 }
 .restaurants__examples a > .restaurants__example > .container_description > .container-heart .Capa_2:hover {
   opacity: 1;
@@ -481,8 +478,8 @@ footer .footer__nav ul li {
 }
 footer .footer__nav ul li .fa-utensils {
   display: flex;
-  align-items: flex-start;
-  font-size: 0.85rem;
+  align-items: center;
+  font-size: 0.8rem;
   height: 100%;
   margin-right: 10px;
   transform: scaleY(1);
@@ -557,27 +554,38 @@ footer .footer__nav ul li .fa-hands-helping {
   justify-content: space-between;
   padding: 33px 38px 29px 18px;
 }
-.principal .principal__title h1 {
+.principal .principal__title > h1 {
   display: flex;
   font-family: "Shrikhand", cursive;
   font-size: 1.65rem;
 }
 @media screen and (max-width: 374px) {
-  .principal .principal__title h1 {
+  .principal .principal__title > h1 {
     font-size: 7vw;
   }
 }
-.principal .principal__title #Capa_1 {
+.principal .principal__title > .container-heart2 {
+  position: relative;
   display: flex;
-  margin-top: 8px;
-  font-size: 10vw;
-  transform: scale(1.1);
+  align-items: center;
+}
+.principal .principal__title > .container-heart2 .Capa_3 {
+  position: absolute;
+  transform: scale(1.15);
+}
+.principal .principal__title > .container-heart2 .Capa_4 {
+  transform: scale(1.15);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 500ms ease;
+}
+.principal .principal__title > .container-heart2 .Capa_4:hover {
+  opacity: 1;
 }
 @media screen and (max-width: 374px) {
-  .principal .principal__title #Capa_1 {
+  .principal .principal__title > .container-heart2 {
     transform: scale(0.9);
     font-size: 5vw;
-    margin-top: 4px;
   }
 }
 
@@ -699,11 +707,10 @@ footer .footer__nav ul li .fa-hands-helping {
 @media screen and (max-width: 350px) {
   .general__choose__slider .left-side {
     width: 210px;
-    background-color: red;
   }
 }
 .general__choose__slider .left-side h4 {
-  font-size: 0.98rem;
+  font-size: 0.97rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -734,6 +741,7 @@ footer .footer__nav ul li .fa-hands-helping {
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 12px;
+  padding-left: 7px;
   width: 80px;
   height: 100%;
   font-size: 0.8rem;
@@ -741,7 +749,7 @@ footer .footer__nav ul li .fa-hands-helping {
 }
 .general__choose__slider .right-side .price .currency {
   padding-left: 1px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 .general__choose__slider .my-selection {

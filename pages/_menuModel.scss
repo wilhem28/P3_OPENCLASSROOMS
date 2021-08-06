@@ -59,7 +59,7 @@
         justify-content: space-between;
         padding: 33px 38px 29px 18px;
 
-        h1 {
+        > h1 {
             display: flex;
             font-family: 'Shrikhand', cursive;
             font-size: 1.65rem;
@@ -68,16 +68,8 @@
             }
         }
 
-        #Capa_1 {
-            display: flex;
-            margin-top: 8px;
-            font-size: 10vw;
-            transform: scale(1.1);
-            @media screen and (max-width: 374px){
-                transform: scale(0.9);
-                font-size: 5vw;
-                margin-top: 4px;
-            }
+        > .container-heart2 {
+            @include heart-animation2;
         }
     }
 }
@@ -161,10 +153,9 @@
         transition: width 400ms ease-out;
         @media screen and (max-width: 350px){
             width: 210px;
-            background-color: red;
         }
         h4 {
-            font-size: 0.98rem; 
+            font-size: 0.97rem; 
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;   
@@ -199,6 +190,7 @@
             justify-content: center;
             align-items: flex-end;
             padding-bottom: 12px;
+            padding-left: 7px;
             width: 80px;
             height: 100%;
             font: {
@@ -208,7 +200,7 @@
 
             .currency {
                 padding-left: 1px;
-                font-size: 0.7rem;
+                font-size: 0.8rem;
                 font-weight: bold;
             }
         }                   

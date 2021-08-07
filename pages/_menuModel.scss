@@ -108,11 +108,11 @@
     margin: 14px;
     overflow: hidden;
     @media screen and (min-width: 800px){
-        display: grid;
-        grid-template-columns: repeat(2, 1fr );
-        grid-column-gap: 5px;
-        grid-column: 2 / span 2;
-        justify-items: center;
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr );
+        // grid-column-gap: 5px;
+        // grid-column: 2 / span 2;
+        // justify-items: center;
         background-color: #ffffff60;
         padding: 14px 14px 0 14px;
         border-radius: 15px;

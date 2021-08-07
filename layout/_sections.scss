@@ -337,35 +337,6 @@
             > .container-heart{
                 @include heart-animation;
             }
-            //     position: relative; 
-            //     display: grid;
-            //     grid-column: 2;
-            //     grid-row: span 2;   
-                        
-            //     .Capa_1{
-            //         position: absolute;
-            //         display: flex;
-            //         top: 5px;   
-            //         transform: scale(0.98);            
-            //     }
-
-            //     .Capa_2{
-            //         position: absolute;
-            //         top: 5px;
-            //         display: flex;
-            //         opacity: 0;
-            //         transition-property: opacity;
-            //         transition-duration: 200ms;
-            //         transition-timing-function: ease-in-out;
-
-            //         &:hover{
-            //             opacity: 1;
-            //             z-index: 1000;
-
-            //         }
-            //     }
-            // }
-
             > p{
                 display: flex;
                 font: {

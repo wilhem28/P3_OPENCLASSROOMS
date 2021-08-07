@@ -492,6 +492,11 @@ footer .footer__nav ul li .fa-hands-helping {
   margin: 0 7px 0 -2px;
   transform: scale(0.7) rotate(-10deg);
 }
+footer .footer__nav ul li:nth-child(4) a {
+  font-size: 0.95rem;
+  color: #ffffff;
+  text-decoration: none;
+}
 
 /* MENU MODEL */
 /* HEADER */
